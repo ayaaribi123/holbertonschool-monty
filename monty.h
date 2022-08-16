@@ -50,5 +50,6 @@ typedef struct instruction_s
 		{NULL, NULL}\
 	}
 int main(int argc, char **argv);
+void push(stack_t **stack, unsigned int line_number);
 
 #endif
