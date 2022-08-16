@@ -38,5 +38,16 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+#define OPCODES\
+	{\
+		{"push", push},\
+		{"pall", pall},\
+		{"pint", pint},\
+		{"pop", pop},\
+		{"swap", swap},\
+		{"add", add},\
+		{"nop", nop},\
+		{NULL, NULL}\
+	}
 
 #endif
