@@ -49,5 +49,6 @@ typedef struct instruction_s
 		{"nop", nop},\
 		{NULL, NULL}\
 	}
+int main(int argc, char **argv);
 
 #endif
