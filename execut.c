@@ -8,8 +8,9 @@
  */
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 {
-int i;
+int i = 0;
 instruction_t opcodes[] = OPCODES;
+
 while (opcodes[i].opcode)
 {
 if (strcmp(opcodes[i].opcode, opcode) == 0)
