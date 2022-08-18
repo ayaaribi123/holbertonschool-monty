@@ -55,8 +55,6 @@ arg Arg;
 		{"pint", pint},\
 		{"pop", pop},\
 		{"swap", swap},\
-		{"add", add},\
-		{"nope", nope},\
 		{NULL, NULL}\
 	}
 int main(int argc, char **argv);
