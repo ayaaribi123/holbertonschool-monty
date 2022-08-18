@@ -13,9 +13,10 @@ int main(int argc, char **argv)
 FILE *fd;
 char *line = NULL;
 size_t size;
+char *opcode = NULL;
 unsigned int line_number = 1;
 stack_t *STACK, *temp;
-void (argc);
+(void) argc;
 
 STACK = NULL;
 
@@ -33,9 +34,13 @@ exit(EXIT_FAILURE);
 }
 while((getline(&line, &size, fd)) != (-1))
 {
+
+if (*line == '\n')
+{
 line_number++;
 continue;
 }
+
 opcode = strtok(NULL, "\n");
 if(!opcode)
 {
@@ -58,4 +63,7 @@ free(temp);
 }
 fclose(fd);
 exit(EXIT_SUCCESS);
+
+}
+return EXIT_SUCCESS;
 }
