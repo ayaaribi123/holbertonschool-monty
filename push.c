@@ -21,7 +21,7 @@ for (i = 0; arg[i] != '\0'; i++)
 if ((isdigit(arg[i])) == 0 && arg[i] != '-')
 {
 fprintf(stderr, "L%d: usage: push integer\n", line_number);
-exit(EXIT_FAILURE)
+exit(EXIT_FAILURE);
 }
 }
 data = atoi(arg);
