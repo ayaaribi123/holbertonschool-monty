@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * main - main elements 
- * @argc: argument counting
- * @argv: argument value 
- * 
- * Return: exit SUCCESS on success or FAILURE on fail
- * 
+ *main - main elements
+ *@argc: argument counting
+ *@argv: argument value
+ *
+ *return: exit SUCCESS on success or FAILURE on fail
+ *
  */
 
 int main(int argc, char **argv)
@@ -32,7 +32,7 @@ if (!fd)
 fprintf(stderr, "Error: Can't open file %s \n", argv[1]);
 exit(EXIT_FAILURE);
 }
-while((getline(&line, &size, fd)) != (-1))
+while ((getline(&line, &size, fd)) != (-1))
 {
 
 if (*line == '\n')
@@ -42,7 +42,7 @@ continue;
 }
 
 opcode = strtok(NULL, "\n");
-if(!opcode)
+if (!opcode)
 {
 line_number++;
 continue;
