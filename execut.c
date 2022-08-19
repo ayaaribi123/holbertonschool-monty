@@ -1,4 +1,15 @@
 #include"monty.h"
+#define OPCODES\
+	{\
+		{"push", push},\
+		{"pall", pall},\
+		{"pint", pint},\
+		{"pop", pop},\
+		{"swap", swap},\
+		{"add", add},\
+		{"nope", nope},\
+		{NULL, NULL}\
+	}
 /**
  * execute_opcode - call opcode of every function
  * @opcode: opcode that will be passed to function
@@ -6,6 +17,7 @@
  * @line_number: line numbers
  * 
  */
+
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 {
 int i = 0;
