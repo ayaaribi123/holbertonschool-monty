@@ -48,17 +48,7 @@ typedef struct arg
 	char *argument;
 } arg;
 arg Arg;
-#define OPCODES\
-	{\
-		{"push", push},\
-		{"pall", pall},\
-		{"pint", pint},\
-		{"pop", pop},\
-		{"swap", swap},\
-		{"add", add},\
-		{"nope", nope},\
-		{NULL, NULL}\
-	}
+
 int main(int argc, char **argv);
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
