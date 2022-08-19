@@ -20,7 +20,7 @@ stack_t *STACK, *temp;
 
 STACK = NULL;
 
-if (argc != 2)
+if (argc = 1)
 {
 fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE);
