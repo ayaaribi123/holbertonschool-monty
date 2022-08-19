@@ -14,13 +14,13 @@ FILE *fd;
 char *line = NULL;
 size_t size;
 char *opcode = NULL;
-unsigned int line_number = 1;
+unsigned int line_number;
 stack_t *STACK, *temp;
 (void) argc;
 
 STACK = NULL;
 
-if (argc == 1)
+if (argc != 1)
 {
 fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE);
