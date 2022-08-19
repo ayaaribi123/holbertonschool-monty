@@ -3,7 +3,7 @@
 *swap - main elements
 *@stack: pointer
 *@line_number: line number
-*Return: exit SUCCESS on success or FAILURE on fail
+*Return: new node value
 */
 void swap(stack_t **stack, unsigned int line_number)
 {
