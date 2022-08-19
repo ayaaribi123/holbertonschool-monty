@@ -1,11 +1,10 @@
 #include "monty.h"
 /**
  *main - main elements
+ *
  *@argc: argument counting
  *@argv: argument value
- *
  *return: exit SUCCESS on success or FAILURE on fail
- *
  */
 
 int main(int argc, char **argv)
