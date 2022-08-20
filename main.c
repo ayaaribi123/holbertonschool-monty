@@ -46,9 +46,9 @@ int main(int argc, char **argv)
 		execute_opcode(opcode, &STACK, line_number);
 		line_number++;
 	}
-	free(line);
-	if (STACK != NULL)
-	{
+free(line);
+if (STACK != NULL)
+{
 while (STACK != NULL)
 {
 temp = STACK;
