@@ -49,9 +49,11 @@ int main(int argc, char **argv)
 	free(line);
 	if (STACK != NULL)
 	{while (STACK != NULL)
-		{temp = STACK;
-			STACK = temp->next;
-			free(temp);}}
+{
+temp = STACK;
+STACK = temp->next;
+free(temp);
+}}
 	fclose(fd);
 	exit(EXIT_SUCCESS);
 }
