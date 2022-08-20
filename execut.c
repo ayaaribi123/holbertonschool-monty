@@ -8,14 +8,14 @@
 		{"swap", swap},\
 		{"add", add},\
 		{"nope", nope},\
-		{NULL, NULL}\
+		{NULL, NULL} \
 	}
 /**
  * execute_opcode - call opcode of every function
  * @opcode: opcode that will be passed to function
  * @stack: pointer to the stack
  * @line_number: line numbers
- * 
+ *
  */
 
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)

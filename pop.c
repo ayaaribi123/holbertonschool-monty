@@ -3,7 +3,7 @@
 *pop - main elements
 *@stack: pointer
 *@line_number: line number
-*Return: exit SUCCESS on success or FAILURE on fail
+*Return: nothing
 */
 void pop(stack_t **stack, unsigned int line_number)
 {
@@ -16,7 +16,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	}
 	n = *stack;
 	*stack = (*stack)->next;
-  free(n);
+	free(n);
 	if (*stack)
 	{
 		(*stack)->prev = NULL;
