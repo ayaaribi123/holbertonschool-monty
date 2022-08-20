@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	char *line = NULL;
 	size_t size = 0;
 	char *opcode = NULL;
-	unsigned int line_number = 1; 
+	unsigned int line_number = 1;
 	stack_t *STACK, *temp;
 	(void) argc;
 	STACK = NULL;
@@ -48,14 +48,10 @@ int main(int argc, char **argv)
 	}
 	free(line);
 	if (STACK != NULL)
-	{
-		while (STACK != NULL)
-		{
-			temp = STACK;
+	{while (STACK != NULL)
+		{temp = STACK;
 			STACK = temp->next;
-			free(temp);
-		}
-	}
+			free(temp);}}
 	fclose(fd);
 	exit(EXIT_SUCCESS);
 }
