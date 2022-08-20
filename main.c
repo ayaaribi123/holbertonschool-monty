@@ -3,7 +3,7 @@
 /**
  * main - entry point
  * @argc: argument count
- * @argv: argument vector
+ * @argv: argument value
  *
  * Return: exit SUCCESS on success, FAILURE on fail
  */
@@ -14,9 +14,9 @@ int main(int argc, char **argv)
 	char *line = NULL;
 	size_t size = 0;
 	char *opcode = NULL;
-	unsigned int line_number = 1; /* Monty starts counting lines at 1 */
+	unsigned int line_number = 1; 
 	stack_t *STACK, *temp;
-	(void) argc; /* temporary */
+	(void) argc;
 
 	STACK = NULL;
 
@@ -26,24 +26,24 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	fd = fopen(argv[1], "r"); /* open file */
+	fd = fopen(argv[1], "r");
 
-	if (!fd) /* error if cannot open file - maybe using fprintf */
+	if (!fd)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
-	while ((getline(&line, &size, fd)) != (-1)) /* read each line */
+	while ((getline(&line, &size, fd)) != (-1))
 	{
-		if (*line == '\n') /* check for blank line */
+		if (*line == '\n')
 		{
 			line_number++;
 			continue;
 		}
-		opcode = strtok(line, " \t\n"); /* set opcode to first token of strtok */
+		opcode = strtok(line, " \t\n");
 
-		if (!opcode) /* check for strtok fail */
+		if (!opcode)
 		{
 			line_number++;
 			continue;
@@ -54,9 +54,9 @@ int main(int argc, char **argv)
 		line_number++;
 	}
 
-	free(line); /* free line */
+	free(line);
 
-	if (STACK != NULL) /* free stack */
+	if (STACK != NULL)
 	{
 		while (STACK != NULL)
 		{
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 		}
 	}
 
-	fclose(fd); /* close file */
+	fclose(fd);
 
-	exit(EXIT_SUCCESS); /* exit */
+	exit(EXIT_SUCCESS);
 }
