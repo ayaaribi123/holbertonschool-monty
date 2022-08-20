@@ -13,7 +13,7 @@ int data, i;
 stack_t *element;
 if (arg == NULL)
 {
-	fprintf(stderr, "L%d: push integer\n", line_number);
+	fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	exit(EXIT_FAILURE);
 }
 for (i = 0; arg[i] != '\0'; i++)
