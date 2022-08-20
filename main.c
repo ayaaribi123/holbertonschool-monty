@@ -27,7 +27,7 @@ exit(EXIT_FAILURE);
 }
 fd = fopen(argv[1], "r");
 
-if (!fd)
+if (fd == NULL)
 {
 fprintf(stderr, "Error: Can't open file %s \n", argv[1]);
 exit(EXIT_FAILURE);
