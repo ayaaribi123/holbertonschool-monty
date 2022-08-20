@@ -48,7 +48,8 @@ int main(int argc, char **argv)
 	}
 	free(line);
 	if (STACK != NULL)
-	{while (STACK != NULL)
+	{
+while (STACK != NULL)
 {
 temp = STACK;
 STACK = temp->next;
