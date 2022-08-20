@@ -22,7 +22,7 @@ fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE);
 }
 fd = fopen(argv[1], "r");
-<<<<<<< HEAD
+
 
 if (fd == NULL)
 {
