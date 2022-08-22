@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	char *opcode = NULL;
 	unsigned int line_number = 1;
 	stack_t *STACK, *temp;
-	(void) argc;
+	(void)argc;
 	STACK = NULL;
 	if (argc != 2)
 	{
@@ -46,15 +46,16 @@ int main(int argc, char **argv)
 		execute_opcode(opcode, &STACK, line_number);
 		line_number++;
 	}
-free(line);
-if (STACK != NULL)
-{
-while (STACK != NULL)
-{
-temp = STACK;
-STACK = temp->next;
-free(temp);
-}}
+	free(line);
+	if (STACK != NULL)
+	{
+		while (STACK != NULL)
+		{
+			temp = STACK;
+			STACK = temp->next;
+			free(temp);
+		}
+	}
 	fclose(fd);
 	exit(EXIT_SUCCESS);
 }
