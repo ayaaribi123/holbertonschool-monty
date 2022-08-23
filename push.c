@@ -30,16 +30,14 @@ void push(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "Error: malloc faild\n");
 		exit(EXIT_FAILURE);
-	}
+		}
 	element->n = data;
 	element->prev = NULL;
 	element->next = *stack;
 	if (*stack != NULL)
 	{
 		(*stack)->prev = element;
-		
 	}
-	
 	*stack = element;
-	
+	free(element);
 }

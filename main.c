@@ -57,5 +57,6 @@ int main(int argc, char **argv)
 		}
 	}
 	fclose(fd);
+	_free(STACK);
 	exit(EXIT_SUCCESS);
 }
