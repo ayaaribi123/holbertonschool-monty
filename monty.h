@@ -1,13 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define  _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 #include <fcntl.h>
+#include <ctype.h>
+#include <string.h>
 #include <stddef.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,18 +37,27 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-#define OPCODES\
-	{\
-		{"push", push},\
-		{"pall", pall},\
-		{"pint", pint},\
-		{"pop", pop},\
-		{"swap", swap},\
-		{"add", add},\
-		{"nop", nop},\
-		{NULL, NULL}\
-	}
+/**
+ * struct arg - argument for the current opcode
+ * @argument: the arguments of the string
+ *
+ * Description: global structure used to pass data around the functions easily
+ */
+typedef struct arg
+{
+	char *argument;
+} arg;
+arg Arg;
+
 int main(int argc, char **argv);
+void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nope(stack_t **stack, unsigned int line_number);
+void _free(stack_t *stack);
 
 #endif
